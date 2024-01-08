@@ -1,4 +1,6 @@
 public class PrimeNumber {
+
+    /* Prime check with effective algorithm */
     public boolean isPrime(int n) {
       boolean isPrime = true;
       if(n == 1) {
