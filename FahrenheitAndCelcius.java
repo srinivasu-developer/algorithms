@@ -1,4 +1,4 @@
-class FahrenheitToCelcius
+public class FahrenheitToCelcius
 {
     
     public double cToF(int c)
