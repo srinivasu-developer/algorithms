@@ -6,6 +6,7 @@ public class BigNumberMath {
         return (a % mod + b % mod) % mod;
     }   
 
+    /* Finds multiplication of 2 long numbers with modulus of 10^9 +7 */
     static long multiplicationUnderModulo(long a, long b)
     {
         long mod = (long) Math.pow(10, 9) + 7;
