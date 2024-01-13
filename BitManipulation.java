@@ -19,6 +19,18 @@ public class BitManipulation
         return 0;
     }
 
+    /* Function to return sum of count of set bits in the integers from 1 to n */
+    public static int countSetBits(int n){
+        if(n <= 1) {
+            return n;
+        }
+        int largestPower = findLargestPower(n);
+        return (largestPower * (int) Math.pow(2, largestPower - 1)) + 
+            (n - (int) Math.pow(2, largestPower) + 1) + 
+            countSetBits(n - (int) Math.pow(2, largestPower));
+        
+    }
+
     /* Find largest power within the number n */
     public static int findLargestPower(int n) {
         int x = 0;
