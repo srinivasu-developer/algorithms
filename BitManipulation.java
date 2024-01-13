@@ -18,5 +18,14 @@ public class BitManipulation
         }
         return 0;
     }
+
+    /* Find largest power within the number n */
+    public static int findLargestPower(int n) {
+        int x = 0;
+        while(1 << (x + 1) <= n) {
+           ++x; 
+        }
+        return x;
+    }
     
 }
