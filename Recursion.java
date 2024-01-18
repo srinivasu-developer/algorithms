@@ -1,6 +1,7 @@
 /* Holds some of the recursion relation algorithms */
 public class Recursion {
 
+    /* Sum of digits using recursion */
     public static int sumOfDigits(int n)
     {
         if(n <= 0) {
