@@ -28,4 +28,13 @@ public class Recursion {
         printNos(n - 1);
         System.out.print(n + " ");
     }
+
+    /* Compute power using recursion */
+    public static int power(int n, int p)
+    {
+        if(p <= 0) {
+            return 1;
+        }
+        return n * power(n, p - 1);
+    }
 }
