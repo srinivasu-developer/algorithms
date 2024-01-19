@@ -18,4 +18,14 @@ public class Recursion {
         }
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
+
+    /* Prints number from 1 to n using recursion */
+    public void printNos(int n)
+    {
+        if(n <= 0) {
+            return;
+        }
+        printNos(n - 1);
+        System.out.print(n + " ");
+    }
 }
