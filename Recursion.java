@@ -37,4 +37,13 @@ public class Recursion {
         }
         return n * power(n, p - 1);
     }
+
+    /* Digital Root of a number */
+    public static int digitalRoot(int n)
+    {
+        if(n % 9 == 0) {
+            return 9;
+        }
+        return ((n % 10) + digitalRoot(n / 10)) % 9;
+    }
 }
