@@ -12,15 +12,12 @@ public class Arrays {
             if (arr[i] > arr[largest]) {
                 second = largest;
                 largest = i;
-            } else if (arr[i] == arr[largest]) {
-                continue;
-            } else if (second == -1 || arr[i] > arr[second]) {
+            } else if (arr[i] != arr[largest] && (second == -1 || arr[i] > arr[second])) {
                 second = i;
             }
         }
-        int secondLargest = second == -1 ? -1 : arr[second];
         largestAndSecondLargest.add(arr[largest]);
-        largestAndSecondLargest.add(secondLargest);
+        largestAndSecondLargest.add(second < 0 ? second : arr[second]);
         return largestAndSecondLargest;
     }
 }
