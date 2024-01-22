@@ -21,8 +21,18 @@ public class Arrays {
   }
 
   /* Insert an element at the end of the given array */
-  public void insertAtEnd(int arr[], int sizeOfArray, int element) {
-      arr[sizeOfArray - 1] = element;
+  public void insertAtEnd(int arr[], int element) {
+      arr[arr.length - 1] = element;
   }
-  
+
+  /* Insert an element at specified index */
+  public void insertAtIndex(int arr[], int index, int element) {
+      int sizeOfArray = arr.length;
+      if(index != sizeOfArray - 1) {
+          for(int temp = sizeOfArray - 1; temp > index; temp--) {
+              arr[temp] = arr[temp - 1];
+          }
+      }
+      arr[index] = element;
+  }
 }
