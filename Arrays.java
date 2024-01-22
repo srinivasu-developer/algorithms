@@ -36,20 +36,22 @@ public class Arrays {
       arr[index] = element;
   }
 
-  public static List<Integer> leaders(int arr[], int n){
-        int leader = 0;
-        int count = 0;
-        for(int i = n - 1, j = n - 1; i >= 0; i--) {
-            if(arr[i] >= leader) {
-                leader = arr[i];
-                arr[j--] = leader;
-                count++;
-            }
-        }
-        List<Integer> leaders = new ArrayList<>(count);
-        for(int i = n - count; i < n; i++) {
-            leaders.add(arr[i]);
-        }
-        return leaders;
-    }
+  /* Finds all the leaders of the given array */
+  public static List<Integer> leaders(int arr[]) {
+      int leader = 0;
+      int count = 0;
+      int n = arr.length;
+      for(int i = n - 1, j = n - 1; i >= 0; i--) {
+          if(arr[i] >= leader) {
+              leader = arr[i];
+              arr[j--] = leader;
+              count++;
+          }
+      }
+      List<Integer> leaders = new ArrayList<>(count);
+      for(int i = n - count; i < n; i++) {
+          leaders.add(arr[i]);
+      }
+      return leaders;
+  }
 }
