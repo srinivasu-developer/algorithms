@@ -56,14 +56,14 @@ public class Arrays {
   }
 
   /* Check if array is sorted in non-decreasing order */
-	public static boolean arraySortedOrNot(int arr[]) { 
+  public static boolean arraySortedOrNot(int arr[]) { 
     int n = arr.length;
-		if (n != 0 && n != 1) {
+    if (n != 0 && n != 1) {
       for (int i = 1; i < n; i++) {
-  			if (arr[i - 1] > arr[i])
-  				return false;
+  	if (arr[i - 1] > arr[i])
+  		return false;
       }
     }
-		return true;
-	}
+    return true;
+  }
 }
