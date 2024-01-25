@@ -79,6 +79,7 @@ public class Arrays {
 	}
   }	
 
+	/* Remove duplicates from a sorted array */
 	public static int remDups(int arr[]) {
 		int n = arr.length;
 		int res = 1;
