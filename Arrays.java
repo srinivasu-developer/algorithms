@@ -106,4 +106,17 @@ public class Arrays {
 		for (int i = count; i<n;i++)
 			arr[i]=0;
 	}
+
+	/* Find max profit from the array of prices */
+	public static int maxProfit(int price[])
+    {
+		int n = price.length;
+    	int profit = 0;
+    	for(int i = 1; i < n; i++)
+    	{
+    		if(price[i] > price[i - 1])
+    			profit += price[i] - price[i -1];
+    	}
+    	return profit;
+    }
 }
