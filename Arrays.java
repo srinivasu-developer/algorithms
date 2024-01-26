@@ -66,7 +66,7 @@ public class Arrays {
 		}
 		return true;
 	}
-
+	
 	/* Reverse array in place */
 	public static void rvereseArray(int arr[], int start, int end) {
 		int temp;
@@ -78,7 +78,7 @@ public class Arrays {
 			end--;
 		}
 	}	
-
+	
 	/* Remove duplicates from a sorted array */
 	public static int remDups(int arr[]) {
 		int n = arr.length;
@@ -90,5 +90,20 @@ public class Arrays {
 			}
 		}
 		return res;
+	}
+
+	/* Move all zeros to the end of the array */
+	public static void moveZerosToEnd(int arr[], ) {
+		int n = arr.length;
+		// Count of non-zero elements
+		int count = 0;
+		// Traverse the array. If arr[i] is non-zero, then
+		// update the value of arr at index count to arr[i]
+		for (int i = 0; i < n; i++)
+			if (arr[i] != 0)
+				arr[count++] = arr[i];
+		// Update all elements at index >=count with value 0
+		for (int i = count; i<n;i++)
+			arr[i]=0;
 	}
 }
