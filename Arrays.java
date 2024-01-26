@@ -93,7 +93,7 @@ public class Arrays {
 	}
 
 	/* Move all zeros to the end of the array */
-	public static void moveZerosToEnd(int arr[], ) {
+	public static void moveZerosToEnd(int arr[]) {
 		int n = arr.length;
 		// Count of non-zero elements
 		int count = 0;
