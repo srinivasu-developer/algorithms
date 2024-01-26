@@ -55,29 +55,29 @@ public class Arrays {
       return leaders;
   }
 
-  /* Check if array is sorted in non-decreasing order */
-  public static boolean arraySortedOrNot(int arr[]) { 
-    int n = arr.length;
-    if (n != 0 && n != 1) {
-      for (int i = 1; i < n; i++) {
-  	if (arr[i - 1] > arr[i])
-  		return false;
-      }
-    }
-    return true;
-  }
-
-  /* Reverse array in place */
-  public static void rvereseArray(int arr[], int start, int end) {
-	int temp;
-	while (start < end) {
-		temp = arr[start];
-		arr[start] = arr[end];
-		arr[end] = temp;
-		start++;
-		end--;
+	/* Check if array is sorted in non-decreasing order */
+	public static boolean arraySortedOrNot(int arr[]) { 
+		int n = arr.length;
+		if (n != 0 && n != 1) {
+		  for (int i = 1; i < n; i++) {
+		if (arr[i - 1] > arr[i])
+			return false;
+		  }
+		}
+		return true;
 	}
-  }	
+
+	/* Reverse array in place */
+	public static void rvereseArray(int arr[], int start, int end) {
+		int temp;
+		while (start < end) {
+			temp = arr[start];
+			arr[start] = arr[end];
+			arr[end] = temp;
+			start++;
+			end--;
+		}
+	}	
 
 	/* Remove duplicates from a sorted array */
 	public static int remDups(int arr[]) {
