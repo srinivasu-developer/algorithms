@@ -119,4 +119,20 @@ public class Arrays {
     	}
     	return profit;
     }
+
+	/* Find max number of consecutive 1's in the given array */
+	public static int countConsecutiveOnce(int arr[]) {
+        int n = arr.length;
+        int count = 0;
+        int intermediate = 0;
+        for(int i = 0; i < n; i++) {
+            if(arr[i] == 1) {
+                intermediate++;
+                count = Math.max(count, intermediate);
+            } else {
+                intermediate = 0;
+            }
+        }
+        return count;
+    }
 }
