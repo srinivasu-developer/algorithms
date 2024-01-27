@@ -135,4 +135,17 @@ public class Arrays {
         }
         return count;
     }
+
+	public static int equilibriumPoint(long arr[], int n) {
+        long sum = calculateSum(arr);
+        long leftCount = 0L;
+        for(int i = 0; i < n; i++) {
+            sum -= arr[i];
+            if(sum == leftCount) {
+                return i + 1;
+            }
+            leftCount += arr[i];
+        }
+        return -1;
+    }
 }
