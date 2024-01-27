@@ -136,6 +136,7 @@ public class Arrays {
         return count;
     }
 
+	/* FINDS the equilibruim point where sum of left and right elements are same */
 	public static int equilibriumPoint(long arr[], int n) {
         long sum = calculateSum(arr);
         long leftCount = 0L;
@@ -149,6 +150,7 @@ public class Arrays {
         return -1;
     }
 
+	/* Prints the maximum of the adjacent numbers */
 	public astatic void maximumAdjacent(int sizeOfArray, int arr[]){
         for(int i = 0; i < sizeOfArray - 1; i++) {
             System.out.print(Math.max(arr[i], arr[i + 1]) + " ");
