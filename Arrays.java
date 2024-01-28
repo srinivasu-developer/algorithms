@@ -200,7 +200,8 @@ public class Arrays {
     }
 
 	/* Converts the given sorted array to a wave array */
-	public static void convertToWave(int n, int[] a) {
+	public static void convertToWave(int[] a) {
+		int n = a.length;
         int temp = 0;
         for(int i = 0; i < n - 1; i = i + 2) {
             temp = a[i];
@@ -208,4 +209,24 @@ public class Arrays {
             a[i + 1] = temp;
         }
     }
+
+	/* Function to find the trapped water between the blocks. */
+    public static long trappingWater(int arr[]) { 
+		int n = arr.length;
+        int[] lmax = new int[n];
+        int[] rmax = new int[n];
+        lmax[0] = arr[0];
+        for (int i = 1; i < n - 1; i++) {
+            lmax[i] = Math.max(lmax[i - 1], arr[i]);
+        } 
+        rmax[n - 1] = arr[n - 1];
+        for(int i = n - 2; i >= 0; i--) {
+            rmax[i] = Math.max(rmax[i + 1], arr[i]);
+        }
+        long result = 0L;
+        for(int i = 1; i < n - 1; i++) {
+            result += (Math.min(rmax[i], lmax[i]) - arr[i]);
+        }
+        return result;
+    } 
 }
