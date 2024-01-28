@@ -156,4 +156,28 @@ public class Arrays {
             System.out.print(Math.max(arr[i], arr[i + 1]) + " ");
         }
     }
+
+	/* Finds the majority among given x and y in the array. If both have equal frequency, the smaller number is the majority one */
+	public int majorityWins(int arr[], int x, int y) {
+		int n = arr.length;
+        int xCount = 0;
+        int yCount = 0;
+        if(x == y) {
+            return x;
+        }
+        for(int i = 0; i < n; i++) {
+            if(arr[i] == x) {
+                xCount++;
+            } else if (arr[i] == y) {
+                yCount++;
+            }
+        }
+        if(xCount > yCount) {
+            return x;
+        } else if(xCount < yCount) {
+            return y;
+        } else {
+            return Math.min(x, y);
+        }
+    }
 }
