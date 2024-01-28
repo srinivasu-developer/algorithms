@@ -180,4 +180,22 @@ public class Arrays {
             return Math.min(x, y);
         }
     }
+
+	/* Finds longest subarray of even odds in the given array */
+	public static int maxEvenOdd(int arr[])
+    {
+		int n = arr.length;
+        int maxLength = 1;
+        int current = 1;
+        for(int i = 1; i < n; i++) {
+            if((arr[i] % 2 == 0 && arr[i - 1] % 2 != 0) || 
+                (arr[i] % 2 != 0 && arr[i - 1] % 2 == 0)) {
+                current++; 
+                maxLength = Math.max(maxLength, current);
+            } else {
+                current = 1;
+            }
+        }
+        return maxLength;
+    }
 }
