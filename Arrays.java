@@ -2,9 +2,9 @@
 public class Arrays {
 
   /* Largest and second largest number of the array */
-  public static ArrayList<Integer> largestAndSecondLargest(int arr[]) {
+  public static List<Integer> largestAndSecondLargest(int arr[]) {
       int sizeOfArray = arr.length;
-      ArrayList<Integer> largestAndSecondLargest = new ArrayList<>(2);
+      List<Integer> largestAndSecondLargest = new ArrayList<>(2);
       int largest = 0;
       int second = -1;
       for(int i = 0; i < sizeOfArray; i++) {
