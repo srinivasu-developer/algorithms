@@ -296,4 +296,24 @@ public class Arrays {
 			System.out.print(nums.get(i) + " ");
 		}
 	}
+
+	//Function to find the maximum occurred integer in all ranges.
+    public static int maxOccured(int L[], int R[], int maxx){
+		int n = L.length;
+        int[] freq = new int[maxx + 1];
+        for(int i = 0; i < n; i++) {
+            freq[L[i]]++;
+            freq[R[i] + 1]--;
+        }
+        int preSum = freq[0];
+        int result = 0;
+        for(int i = 1; i < maxx + 1; i++) {
+            freq[i] += freq[i - 1];
+            if(freq[i] > preSum) {
+                preSum = freq[i];
+                result = i;
+            }
+        }
+        return result;
+    }
 }
