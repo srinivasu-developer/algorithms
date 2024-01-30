@@ -297,7 +297,7 @@ public class Arrays {
 		}
 	}
 
-	//Function to find the maximum occurred integer in all ranges.
+	/* Function to find the maximum occurred integer in all ranges. */
     public static int maxOccured(int L[], int R[], int maxx){
 		int n = L.length;
         int[] freq = new int[maxx + 1];
