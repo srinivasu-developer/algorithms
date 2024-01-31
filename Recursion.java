@@ -65,4 +65,13 @@ public class Recursion {
         }
         positivePattern(current + 5, input, output);
     }
+
+    /* Adds negative pattern to the output list */
+    public int negativePattern(int n, List<Integer> output) {
+        output.add(n);
+        if(n <= 0) {
+            return n;
+        }
+        return negativePattern(n - 5, output);
+    }
 }
