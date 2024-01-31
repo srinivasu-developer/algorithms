@@ -56,4 +56,13 @@ public class Recursion {
             return (josephus(n - 1, k) + k-1) % n + 1;
         }
     }
+
+    /* Adds positive pattern to the output list */
+    public void positivePattern(int current, int input, List<Integer> output) {
+        output.add(current);
+        if(current >= input) {
+            return;
+        }
+        positivePattern(current + 5, input, output);
+    }
 }
