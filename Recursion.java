@@ -58,32 +58,32 @@ public class Recursion {
     }
 
     /* Adds positive pattern to the output list */
-    public void positivePattern(int current, int input, List<Integer> output) {
+    public void positivePattern(int current, int input, int increment, List<Integer> output) {
         output.add(current);
         if(current >= input) {
             return;
         }
-        positivePattern(current + 5, input, output);
+        positivePattern(current + increment, input, output);
     }
 
     /* Adds negative pattern to the output list */
-    public int negativePattern(int n, List<Integer> output) {
+    public int negativePattern(int n, int increment, List<Integer> output) {
         output.add(n);
         if(n <= 0) {
             return n;
         }
-        return negativePattern(n - 5, output);
+        return negativePattern(n - increment, output);
     }
 
-    /* Uses the above 2 methonds to print a pattern of number from N till 0 and again till N */
-    public List<Integer> pattern(int N){
+    /* Uses the above 2 methonds to print a pattern of number from N till 0 and again till N with an increment */
+    public List<Integer> pattern(int N, int increment){
         List<Integer> ouput = new ArrayList<>();
-        if(N < -5) {
+        if(N < (-1 * increment)) {
             ouput.add(N);
         } else {
-           int lastNumber = negativePattern(N, ouput);
+           int lastNumber = negativePattern(N, increment, ouput);
             if(N > 0) {
-                positivePattern(lastNumber + 5, N, ouput);
+                positivePattern(lastNumber + increment, N, increment, ouput);
             } 
         }
         return ouput;
