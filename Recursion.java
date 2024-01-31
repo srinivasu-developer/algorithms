@@ -74,4 +74,18 @@ public class Recursion {
         }
         return negativePattern(n - 5, output);
     }
+
+    /* Uses the above 2 methonds to print a pattern of number from N till 0 and again till N */
+    public List<Integer> pattern(int N){
+        List<Integer> ouput = new ArrayList<>();
+        if(N < -5) {
+            ouput.add(N);
+        } else {
+           int lastNumber = negativePattern(N, ouput);
+            if(N > 0) {
+                positivePattern(lastNumber + 5, N, ouput);
+            } 
+        }
+        return ouput;
+    }
 }
