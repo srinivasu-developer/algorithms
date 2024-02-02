@@ -317,7 +317,9 @@ public class Arrays {
         return result;
     }
 
-	public static int minAdjDiff(int arr[], int n) {
+	/* Finds the min adjucent difference */
+	public static int minAdjDiff(int arr[]) {
+		int n = arr.length;
         if (n < 2) 
             return 0; 
         int res = Math.abs(arr[1] - arr[0]); 
