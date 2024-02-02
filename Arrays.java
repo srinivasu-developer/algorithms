@@ -316,4 +316,16 @@ public class Arrays {
         }
         return result;
     }
+
+	public static int minAdjDiff(int arr[], int n) {
+        if (n < 2) 
+            return 0; 
+        int res = Math.abs(arr[1] - arr[0]); 
+        for (int i = 2; i < n; i++) 
+            res = Math.min(res, Math.abs(arr[i] - arr[i - 1])); 
+  
+        // Checking circular link 
+        return Math.min(res, Math.abs(arr[n - 1] - arr[0])); 
+        
+    }
 }
