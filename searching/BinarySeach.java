@@ -19,4 +19,23 @@ public class BinarySeach {
             return searchInSorted(arr, middle + 1, end, k);
         }
     }
+
+    public static int searchInSortedIterative(int arr[], int k)
+    {
+        int lower = 0;
+        int end = arr.length - 1;
+        int result = -1;
+        while(lower <= end) {
+            int middle = (lower + end) / 2;
+            if(arr[middle] == k) {
+                result = 1;
+                break;
+            } else if (arr[middle] > k) {
+                end = middle - 1;
+            } else {
+                lower = middle + 1;
+            }
+        }
+        return result;
+    }
 }
