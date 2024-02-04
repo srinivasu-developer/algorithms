@@ -38,4 +38,28 @@ public class BinarySeach {
         }
         return result;
     }
+    
+    public static int findFloor(long arr[], int n, long x)
+    {
+        int lower = 0;
+        int end = n - 1;
+        int middle;
+        int result = -1;
+        if(arr[end] <= x) {
+            return end;
+        }
+        while (lower <= end) {
+            middle = (lower + end) / 2;
+            if(arr[middle] == x || (arr[middle] < x && arr[middle + 1] > x)) {
+                result = middle;
+                break;
+            } else if (arr[middle] > x) {
+                end = middle - 1;
+            } else {
+                lower = middle + 1;
+            }
+        }
+        return result;
+        
+    }
 }
