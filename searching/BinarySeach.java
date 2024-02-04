@@ -84,4 +84,22 @@ public class BinarySeach {
 		}
 		return res;
     }
+
+	/* Finds right most index of the given number */
+    public static int righIndex(int arr[], int x)
+    {
+       int n = arr.length;
+       int low = 0, high = n - 1, res = -1;
+		while (low <= high) {
+			// Normal Binary Search Logic
+			int mid = (low + high) / 2;
+			if (arr[mid] > x)
+				high = mid - 1;
+			else if (arr[mid] <= x) {
+				res = mid;
+				low = mid + 1;
+			}
+		}
+		return res;
+    }
 }
