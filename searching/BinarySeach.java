@@ -38,9 +38,11 @@ public class BinarySeach {
         }
         return result;
     }
-    
-    public static int findFloor(long arr[], int n, long x)
+
+	/* Finds floor of the given number in the array */
+    public static int findFloor(long arr[], long x)
     {
+		int n = arr.length;
         int lower = 0;
         int end = n - 1;
         int middle;
@@ -62,9 +64,10 @@ public class BinarySeach {
         return result;
     }
 
-    public static int leftIndex(int n, int arr[], int x)
+	/* Finds left most index of the given number */
+    public static int leftIndex(int arr[], int x)
     {
-       
+       int n = arr.length;
        int low = 0, high = n - 1, res = -1;
 		while (low <= high) {
 			// Normal Binary Search Logic
