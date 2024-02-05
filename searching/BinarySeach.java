@@ -1,11 +1,14 @@
 
 public class BinarySeach {
-  
-    public static int searchInSorted(int arr[], int n, int k)
+
+	/* Search an element in a sorted array */
+    public static int searchInSorted(int arr[], int k)
     {
+		int n = arr.length;
         return searchInSorted(arr, 0, n - 1, k);
     }
-    
+
+	/* Search an element in a sorted array with recursion binary search */
     private static int searchInSorted(int arr[], int lower, int end, int k) {
         if(lower > end) {
             return -1;
@@ -20,6 +23,7 @@ public class BinarySeach {
         }
     }
 
+	/* Search an element in a sorted array with iterative binary search */
     public static int searchInSortedIterative(int arr[], int k)
     {
         int lower = 0;
