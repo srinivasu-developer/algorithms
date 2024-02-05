@@ -102,4 +102,14 @@ public class BinarySeach {
 		}
 		return res;
     }
+
+	/* Counts the number of times the given number occurred in a sorted array */
+	public static int countOcc(int arr[], int x)
+	{
+		int first = leftIndex(arr, x);
+		if(first == -1)
+			return 0;
+		else 
+			return righIndex(arr, x) - first + 1;
+	}
 }
