@@ -26,5 +26,19 @@ public class IterativeSearch{
 				
 		return -1;
 	}
+
+	/* Finds floor of sqrt of the given number */
+	public static int floorSqrt(int x)
+	{
+		// Base cases
+		if (x == 0 || x == 1)
+			return x;
+		int i = 1, result = 1;
+		while (result <= x) {
+			i++;
+			result = i * i;
+		}
+		return i - 1;
+	}
     
 }
