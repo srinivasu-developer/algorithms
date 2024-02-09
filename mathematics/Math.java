@@ -15,5 +15,16 @@ public class Math {
 		}
 		return (reverse == n); // if it is true then it will return 1 else if false it will return 0;
 	}
+
+	public static int findTrailingZeros(int n)
+	{
+		if (n < 0) // Negative Number Edge Case
+			return -1;
+		int count = 0;
+		// Keep dividing n by powers of 5 and update count
+		for (int i = 5; n / i >= 1; i *= 5)
+			count += n / i;
+		return count;
+	}
   
 }
