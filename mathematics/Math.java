@@ -50,5 +50,11 @@ public class Math {
 			return b;
 		return gcdWithRecursion(b % a, a);
 	}
+
+	/* LCM of 2 numbers */
+	public static int lcm(int a, int b)
+	{
+		return (a / gcd(a, b)) * b;
+	}
   
 }
