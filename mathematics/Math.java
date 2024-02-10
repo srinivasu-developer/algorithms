@@ -57,6 +57,7 @@ public class Math {
 		return (a / gcd(a, b)) * b;
 	}
 
+	/* Check for prime */
 	public static boolean isPrime(int n)
 	{
 		// Check if number is less than equal to 1
