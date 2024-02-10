@@ -42,5 +42,13 @@ public class Math {
 			return gcd(a-b, b);
 		return gcd(a, b-a);
 	}
+
+	/* GCD with recursion */
+	public static int gcdWithRecursion(int a, int b)
+	{
+		if (a == 0)
+			return b;
+		return gcdWithRecursion(b % a, a);
+	}
   
 }
