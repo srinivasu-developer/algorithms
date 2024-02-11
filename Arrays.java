@@ -368,4 +368,22 @@ public class Arrays {
 				System.out.print(arr[i] + " ");
 		}
 	}
+
+	/* Max diff in the given array */
+	public static int maxDiff(int arr[])
+	{
+		int arr_size = arr.length;
+		int max_diff = arr[1] - arr[0];
+		int i, j;
+		for (i = 0; i < arr_size; i++)
+		{
+			for (j = i + 1; j < arr_size; j++)
+			{
+				if (arr[j] - arr[i] > max_diff)
+					max_diff = arr[j] - arr[i];
+			}
+		}
+		return max_diff;
+	}
+
 }
