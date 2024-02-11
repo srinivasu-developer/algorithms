@@ -342,4 +342,14 @@ public class Arrays {
     	}
     	arr[n - 1] = temp;
     }
+
+	/* Left rotates by d positions */
+	public static void leftRotate(int arr[], int d)
+    {
+		int n = arr.length;
+    	for(int i = 0; i < d; i++)
+    	{
+    		lRotateOne(arr, n);
+    	}
+    }
 }
