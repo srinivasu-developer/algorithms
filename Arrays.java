@@ -344,6 +344,28 @@ public class Arrays {
 		}
 	}
 
+	/* Longest even and add sub array from the list */
+	public static int longestEvenOddSubarray(ArrayList<Integer> a, int n)
+	{
+		// Length of longest alternating subarray
+		int ans = 1;
+		for (int i = 0; i < n; i++) {
+			int cnt = 1;
+			for (int j = i + 1; j < n; j++) {
+				if ((a.get(j - 1) % 2 == 0 && a.get(j) % 2 != 0)
+					|| (a.get(j - 1) % 2 != 0 && a.get(j) % 2 == 0))
+					cnt++;
+				else
+					break;
+			}
+			ans = Math.max(ans, cnt);
+		}
+		// Length of 'ans' can never be 1 since even odd has to occur in pair or more so return 0 if ans = 1
+		if (ans == 1)
+			return 0;
+		return ans;
+	}
+
 	/* Function to find the maximum occurred integer in all ranges. */
     public static int maxOccured(int L[], int R[], int maxx){
 		int n = L.length;
