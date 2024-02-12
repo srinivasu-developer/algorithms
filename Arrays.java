@@ -366,6 +366,30 @@ public class Arrays {
 		return ans;
 	}
 
+	/* Max even odd effecient solution */
+	public static int maxEvenOdd(int[] arr) {
+		int n = arr.length;
+		if (n == 0)
+			return 0;
+		int maxLength = 0;
+		int prevOdd = arr[0] % 2;
+		int curLength = 1;
+		for (int i = 1; i < n; i++)
+		{
+			// everytime we check if previous element has opposite even/odd nature or not
+			if (arr[i] % 2 != prevOdd)
+				curLength++;
+			else
+				curLength = 1;
+			// changing value when new maximum subarray is found
+			if (curLength > maxLength)
+				maxLength = curLength;
+			// updating even/odd nature of prev number encountered everytime
+			prevOdd = arr[i] % 2;
+		}
+		return maxLength;
+	}
+
 	/* Function to find the maximum occurred integer in all ranges. */
     public static int maxOccured(int L[], int R[], int maxx){
 		int n = L.length;
