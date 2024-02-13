@@ -6,5 +6,3 @@ In-Place Sorting: An in-place sorting algorithm uses constant extra space for pr
 Insertion Sort is an In-Place sorting algorithm. This algorithm works in a similar way of sorting a deck of playing cards. 
 
 The idea is to start iterating from the second element of array till last element and for every element insert at its correct position in the subarray before it. 
-
-In the below image you can see, how the array [4, 3, 2, 10, 12, 1, 5, 6] is being sorted in increasing order following the insertion sort algorithm.
