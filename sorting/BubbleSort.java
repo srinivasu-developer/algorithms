@@ -15,6 +15,7 @@ public class BubbleSort {
         }
     }
 
+    /* Effecient way for bubble sort, where it takes linear time if the array is already sorted */
     public static void bubbleSortEffecient(int arr[])
     {
         int n = arr.length;
