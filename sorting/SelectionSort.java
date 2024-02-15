@@ -10,10 +10,13 @@ public class SelectionSort {
             for (int j = i+1; j < n; j++)
                 if (arr[j] < arr[min_idx])
                     min_idx = j;
-            // Swap the found minimum element with the first element
-            int temp = arr[min_idx];
-            arr[min_idx] = arr[i];
-            arr[i] = temp;
+            swap(arr, min_idx, i);
         }
+    }
+
+    private static void swap(int[] arr, int first, int second) {
+        arr[first] = arr[first] + arr[second];
+        arr[second] = arr[first] - arr[second];
+        arr[first] = arr[first] - arr[second];
     }
 }
