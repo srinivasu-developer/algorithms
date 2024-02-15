@@ -7,7 +7,11 @@ Insertion Sort is an In-Place sorting algorithm. This algorithm works in a simil
 
 The idea is to start iterating from the second element of array till last element and for every element insert at its correct position in the subarray before it. 
 
+## Selection Sort
+The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array.
 
+The subarray which is already sorted. 
+Remaining subarray which is unsorted.
 
 ## What is a stable sorting algorithm? 
 A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input data set
