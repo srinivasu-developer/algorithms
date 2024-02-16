@@ -16,5 +16,10 @@ Remaining subarray which is unsorted.
 ## Insertion Sort
 Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
 
+#### Characteristics of Insertion Sort:
+* This algorithm is one of the simplest algorithm with simple implementation
+* Basically, Insertion sort is efficient for small data values
+* Insertion sort is adaptive in nature, i.e. it is appropriate for data sets which are already partially sorted.
+
 ## What is a stable sorting algorithm? 
 A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input data set
