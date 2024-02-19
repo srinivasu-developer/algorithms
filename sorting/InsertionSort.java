@@ -1,5 +1,6 @@
 public class InsertionSort {
-    
+
+    /* Sorting*/
     public station void sort(int arr[])
     {
         int n = arr.length;
