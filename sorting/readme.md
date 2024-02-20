@@ -21,5 +21,8 @@ Insertion sort is a simple sorting algorithm that works similar to the way you s
 * Basically, Insertion sort is efficient for small data values
 * Insertion sort is adaptive in nature, i.e. it is appropriate for data sets which are already partially sorted.
 
+## Merge Sort
+A merge sort consists of several passes over the input. The first pass merges segments of size 1, the second merges segments of size 2, and the i-th pass merges segments of size 2i-1. Thus, the total number of passes is [log2n]. As merge showed, we can merge two sorted segments in linear time, which means that each pass takes O(n) time. Since there are [log2n] passes, the total computing time is O(nlogn).
+
 ## What is a stable sorting algorithm? 
 A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input data set
