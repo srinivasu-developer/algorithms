@@ -24,5 +24,13 @@ Insertion sort is a simple sorting algorithm that works similar to the way you s
 ## Merge Sort
 A merge sort consists of several passes over the input. The first pass merges segments of size 1, the second merges segments of size 2, and the i-th pass merges segments of size 2i-1. Thus, the total number of passes is [log2n]. As merge showed, we can merge two sorted segments in linear time, which means that each pass takes O(n) time. Since there are [log2n] passes, the total computing time is O(nlogn).
 
+#### Advantages of Merge Sort:
+* Merge sort has a time complexity of O(n log n), which means it is relatively efficient for sorting large datasets.
+* Merge sort is a stable sort, which means that the order of elements with equal values is preserved during the sort.
+* It is easy to implement thus making it a good choice for many applications.
+* It is useful for external sorting. This is because merge sort can handle large datasets, it is often used for external sorting, where the data being sorted does not fit in memory.
+* The merge sort algorithm can be easily parallelized, which means it can take advantage of multiple processors or cores to sort the data more quickly.
+* Merge sort requires relatively few additional resources (such as memory) to perform the sort. This makes it a good choice for systems with limited resources.
+
 ## What is a stable sorting algorithm? 
 A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input data set
