@@ -32,5 +32,11 @@ A merge sort consists of several passes over the input. The first pass merges se
 * The merge sort algorithm can be easily parallelized, which means it can take advantage of multiple processors or cores to sort the data more quickly.
 * Merge sort requires relatively few additional resources (such as memory) to perform the sort. This makes it a good choice for systems with limited resources.
 
+#### Drawbacks of Merge Sort:
+* Slower compared to the other sort algorithms for smaller tasks. Although effecient for large datasets its not the best choice for small datasets.
+* The merge sort algorithm requires an additional memory space of 0(n) for the temporary array. This is to store the subarrays that are used during the sorting process.
+* It goes through the whole process even if the array is sorted.
+* It requires more code to implement since we are dividing the array into smaller subarrays and then merging the sorted subarrays back together.
+
 ## What is a stable sorting algorithm? 
 A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input data set
