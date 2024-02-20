@@ -38,5 +38,13 @@ A merge sort consists of several passes over the input. The first pass merges se
 * It goes through the whole process even if the array is sorted.
 * It requires more code to implement since we are dividing the array into smaller subarrays and then merging the sorted subarrays back together.
 
+## Quick Sort
+QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot(in case of lomuto partition). There are many different versions of quickSort that pick pivot in different ways. 
+ 
+1. Always pick first element as pivot.
+2. Always pick last element as pivot (implemented below)
+3. Pick a random element as pivot.
+4. Pick median as pivot.
+
 ## What is a stable sorting algorithm? 
 A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input data set
