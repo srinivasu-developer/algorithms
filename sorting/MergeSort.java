@@ -1,5 +1,6 @@
 public class MergeSort {
 
+    /* Function to merge 2 sorted arrays and store them in a new array*/
     public static void mergeArrays(int[] arr1, int[] arr2, int[] arr3) {
         int n1 = arr1.length;
         int n2 = arr2.length;
