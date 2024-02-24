@@ -25,4 +25,25 @@ public class QuickSort {
         }
         return position;
     }
+
+    public static int lomutoPartition(int numbers[], int start, int last) {
+        int pivot = numbers[last];
+        int index = start - 1;
+        int temp = 0;
+        for (int i = start; i < last; ++i)
+        {
+            if (numbers[i] < pivot) {
+                ++index;
+                swapIndices(numbers, index, i);
+            }
+        }
+        swapIndices(numbers, index, last);      
+        return ++index;
+    }
+
+    private static void swapIndices(int[] arr, int first, int second) {
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
+    }
 }
