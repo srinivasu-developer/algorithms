@@ -58,4 +58,13 @@ public class QuickSort {
             quicksortWithNaive(numbers, point + 1, end);
         }
     }
+
+    /* Quick sort using Lomuto partition method */
+    public static void quicksortWithLomuto(int numbers[], int start, int end) {
+        if (start < end) {
+            int pivotIndex = lomutoPartition(numbers, start, end);
+            quicksortWithLomuto(numbers, start, pivotIndex - 1);
+            quicksortWithLomuto(numbers, pivotIndex + 1, end);
+        }
+    }
 }
