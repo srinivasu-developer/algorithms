@@ -48,4 +48,14 @@ public class QuickSort {
         arr[first] = arr[second];
         arr[second] = temp;
     }
+
+    /* Quick sort using naive partition method */
+    public static void quicksortWithNaive(int numbers[], int start, int end)
+    {
+        if (start < end) {
+            int point = naivePartition(numbers, start, end);
+            quicksortWithNaive(numbers, start, point - 1);
+            quicksortWithNaive(numbers, point + 1, end);
+        }
+    }
 }
