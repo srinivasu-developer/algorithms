@@ -1,5 +1,6 @@
 public class QuickSort {
 
+    /* Naive partition */
     public static int naivePartition(int a[], int start, int high)
     {
         int temp[] = new int[(high - start) + 1];
@@ -26,6 +27,7 @@ public class QuickSort {
         return position;
     }
 
+    /* Lomuto partition */
     public static int lomutoPartition(int numbers[], int start, int last) {
         int pivot = numbers[last];
         int index = start - 1;
