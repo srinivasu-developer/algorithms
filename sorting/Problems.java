@@ -1,5 +1,20 @@
 public class Problems {
 
+    public static int kthSmallest(int arr[], int n, int k) {
+        int low = 0, high = n - 1;
+        while(low <= high) {
+            int partition = lomutoPartition(arr, low, high);
+            if(partition == k - 1) {
+                return arr[partition];
+            } else if (partition > k - 1) {
+                high = partition - 1;
+            } else {
+                low = partition + 1;
+            }
+        }
+        return -1;
+    }
+
     private static int lomutoPartition(int arr[], int low, int high) {
         int pivot = arr[high];
         int index = low - 1;
