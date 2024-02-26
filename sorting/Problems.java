@@ -1,7 +1,8 @@
 public class Problems {
 
     /* Finds the Kth smallest number in the given array */
-    public static int kthSmallest(int arr[], int n, int k) {
+    public static int kthSmallest(int arr[], int k) {
+        int n = arr.length;
         int low = 0, high = n - 1;
         while(low <= high) {
             int partition = lomutoPartition(arr, low, high);
@@ -17,7 +18,8 @@ public class Problems {
     }
 
     /* Finds the minimum difference of 2 elements in the given array */
-    public static int minimumDifference(int arr[], int n) {
+    public static int minimumDifference(int arr[]) {
+        int n = arr.length;
         Arrays.sort(arr);
         int res = arr[1] - arr[0];
         for(int i = 2; i < n; i++) {
