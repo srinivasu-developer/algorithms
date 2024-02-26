@@ -1,5 +1,6 @@
 public class Problems {
 
+    /* Finds the Kth smallest number in the given array */
     public static int kthSmallest(int arr[], int n, int k) {
         int low = 0, high = n - 1;
         while(low <= high) {
