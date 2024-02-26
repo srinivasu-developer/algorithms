@@ -16,7 +16,8 @@ public class Problems {
         return -1;
     }
 
-    public static int MinimumDifference(int arr[], int n) {
+    /* Finds the minimum difference of 2 elements in the given array */
+    public static int minimumDifference(int arr[], int n) {
         Arrays.sort(arr);
         int res = arr[1] - arr[0];
         for(int i = 2; i < n; i++) {
