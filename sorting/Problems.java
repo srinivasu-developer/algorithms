@@ -15,6 +15,15 @@ public class Problems {
         return -1;
     }
 
+    public static int MinimumDifference(int arr[], int n) {
+        Arrays.sort(arr);
+        int res = arr[1] - arr[0];
+        for(int i = 2; i < n; i++) {
+            res = Math.min(res, arr[i] - arr[i - 1]);
+        }
+        return res;
+    }
+
     private static int lomutoPartition(int arr[], int low, int high) {
         int pivot = arr[high];
         int index = low - 1;
