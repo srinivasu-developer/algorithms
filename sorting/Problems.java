@@ -28,6 +28,19 @@ public class Problems {
         return res;
     }
 
+    /* Sort the given binary array */
+    public static void binarySort(int arr[]) {
+        int n = arr.length;
+        int low = 0, high = n - 1;
+        while (low < high) {
+            if(arr[low] == 1) {
+                swap(arr, low, high--);
+            } else {
+                ++low;
+            }
+        }
+    }   
+
     private static int lomutoPartition(int arr[], int low, int high) {
         int pivot = arr[high];
         int index = low - 1;
