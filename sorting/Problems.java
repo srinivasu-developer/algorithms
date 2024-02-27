@@ -53,8 +53,8 @@ public class Problems {
         }
     }
 
-	public static void sortArr012(int arr[])
-    {
+	/* Sort the array having 3 different elements in our case, it's 0, 1 and 2; this approach is having 2 traversals of the array */
+	public static void sortArr012(int arr[]) {
 		int n = arr.length;
         int i, cnt0 = 0, cnt1 = 0, cnt2 = 0;
         // Count the number of 0s, 1s and 2s in the array
