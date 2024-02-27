@@ -17,7 +17,19 @@ public class Problems {
         return -1;
     }
 
-    /* Finds the minimum difference of 2 elements in the given array */
+    /* Finds the minimum difference of 2 elements in the given array with quadratic time complexity */
+    public static int findMinDiff(int[] arr) {
+        int n = arr.length;
+		int diff = Integer.MAX_VALUE;
+		// Find the min diff by comparing difference of all possible pairs in given array
+		for (int i = 0; i < n - 1; i++)
+			for (int j = i + 1; j < n; j++)
+				if (Math.abs((arr[i] - arr[j])) < diff)
+					diff = Math.abs((arr[i] - arr[j]));
+		return diff;
+	}
+
+    /* Finds the minimum difference of 2 elements in the given array an effecient approach */
     public static int minimumDifference(int arr[]) {
         int n = arr.length;
         Arrays.sort(arr);
