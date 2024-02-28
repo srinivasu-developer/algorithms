@@ -112,6 +112,25 @@ public class Problems {
         return index;
     }
 
+	private static int hoarePartition(int[] arr, int low, int high) {
+        int pivot = arr[low];
+        int i = low - 1, j = high + 1;
+        while (true)
+        {
+            // Find leftmost element greater than or equal to pivot
+            do {
+                i++;
+            } while (arr[i] < pivot);
+            // Find rightmost element smaller than or equal to pivot
+            do {
+                j--;
+            } while (arr[j] > pivot);
+            if (i >= j)
+                return j;
+            swap(arr, i, j);
+        }
+    }
+
     private static void swap(int arr[], int first, int second) {
         int temp = arr[first];
         arr[first] = arr[second];
