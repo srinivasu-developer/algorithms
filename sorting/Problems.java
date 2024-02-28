@@ -86,6 +86,20 @@ public class Problems {
         }
 	}
 
+	public static void sortArr012Effecient(int arr[]){
+		int n = arr.length;
+        int low = 0, cur = 0, high = n - 1;
+        while (cur <= high) {
+            if(arr[cur] == 0) {
+                swap(arr, low++, cur++);
+            } else if (arr[cur] == 1) {
+                ++cur;
+            } else {
+                swap(arr, cur, high--);
+            }
+        }
+    }
+
     private static int lomutoPartition(int arr[], int low, int high) {
         int pivot = arr[high];
         int index = low - 1;
