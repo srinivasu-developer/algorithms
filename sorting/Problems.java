@@ -112,6 +112,7 @@ public class Problems {
         return index;
     }
 
+	/* The implementation info can be found at - https://github.com/srinivasu-developer/algorithms/blob/master/sorting/readme.md#hoares-partition*/
 	private static int hoarePartition(int[] arr, int low, int high) {
         int pivot = arr[low];
         int i = low - 1, j = high + 1;
