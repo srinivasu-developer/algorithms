@@ -117,7 +117,7 @@ public class Problems {
             arr3[k++] = arr2[j++];
     }
 
-	public static void findMaxGuests(int arrl[], int exit[], ) {
+	public static void findMaxGuests(int arrl[], int exit[]) {
 		int n = arrl.length;
 	    // Sort arrival and exit arrays
 	    Arrays.sort(arrl);
