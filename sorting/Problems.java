@@ -86,7 +86,8 @@ public class Problems {
         }
 	}
 
-	public static void sortArr012Effecient(int arr[]){
+	/* Sorting the 3 type array which is having 0, 1 and 2 as values */
+	public static void sortArr012Effecient(int arr[]) {
 		int n = arr.length;
         int low = 0, cur = 0, high = n - 1;
         while (cur <= high) {
