@@ -117,6 +117,31 @@ public class Problems {
             arr3[k++] = arr2[j++];
     }
 
+	public static void findMaxGuests(int arrl[], int exit[], ) {
+		int n = arrl.length;
+	    // Sort arrival and exit arrays
+	    Arrays.sort(arrl);
+	    Arrays.sort(exit);
+	    int guests_in = 1, max_guests = 1, time = arrl[0];
+	    int i = 1, j = 0;
+	    // Similar to merge in merge sort to process all events in sorted order
+	    while (i < n && j < n) {
+	        // If next event in sorted order is arrival, increment count of guests
+	        if (arrl[i] <= exit[j]) {
+	            guests_in++;
+	            if (guests_in > max_guests) {
+	                max_guests = guests_in;
+	                time = arrl[i];
+	            }
+	            i++; //increment index of arrival array
+	        }
+	        else {
+	            guests_in--;
+	            j++;
+	        }
+    	}
+	}
+
     private static int lomutoPartition(int arr[], int low, int high) {
         int pivot = arr[high];
         int index = low - 1;
