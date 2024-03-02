@@ -117,6 +117,7 @@ public class Problems {
             arr3[k++] = arr2[j++];
     }
 
+	/* Finding the maximum number of guests that can meet in an interval */
 	public static void findMaxGuests(int arrl[], int exit[]) {
 		int n = arrl.length;
 	    // Sort arrival and exit arrays
@@ -141,6 +142,30 @@ public class Problems {
 	        }
     	}
 	}
+
+	/* Finding the maximum number of guests that can meet in an interval */
+	public static void maxOverlap(int[] start, int[] end) {
+		int n = start.length;
+	    int maxa = Arrays.stream(start).max().getAsInt();
+	    int maxb = Arrays.stream(end).max().getAsInt();
+	    int maxc = Math.max(maxa, maxb);
+	    int[] x = new int[maxc + 2];
+	    Arrays.fill(x, 0);   
+	    int cur = 0,idx = 0;
+	    for(int i = 0; i < n; i++) {
+	        ++x[start[i]];
+	        --x[end[i]+1];
+	    }  
+	    int maxy = Integer.MIN_VALUE;
+	    for(int i = 0; i <= maxc; i++) {
+	        cur += x[i];
+	        if(maxy < cur) {
+	            maxy = cur;
+	            idx = i;
+	        }         
+	    }
+		System.out.println("Maximum value is: " + maxy + " at position: " + idx + "");
+	} 
 
     private static int lomutoPartition(int arr[], int low, int high) {
         int pivot = arr[high];
