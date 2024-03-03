@@ -79,7 +79,7 @@ Cycle sort is an in-place sorting Algorithm, unstable sorting algorithm, and a c
 Worst Case: O(n^2)
 Average Case: O(n^2)
 Best Case: O(n^2)
-
+Auxiliary Space: O(1)
 
 ## What is a stable sorting algorithm? 
 A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input data set
