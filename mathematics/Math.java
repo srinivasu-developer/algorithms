@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Math {
   
   	public static int countDigit(long n) {
@@ -97,9 +99,9 @@ public class Math {
 	}
 
 	/* Returns list of prime factors for the given number */
-	public static void primeFactorsEff(int n) {
+	public static List<Integer> primeFactorsEff(int n) {
 		if(n <= 1)
-			return;
+			return Collections.emptyList();
 		List<Integer> primeFactors = new ArrayList<>();
 		while(n % 2 == 0) {
 			primeFactors.add(2);
@@ -121,6 +123,7 @@ public class Math {
 		}
 		if(n > 3)
 			primeFactors.add(n);
+		return primeFactors;
 	}
   
 }
