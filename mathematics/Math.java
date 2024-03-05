@@ -127,5 +127,12 @@ public class Math {
 			primeFactors.add(n);
 		return primeFactors;
 	}
+
+	/* Prints all the divisors of the given number */
+	public static void printDivisors(int n) {
+		for (int i = 1; i <= n; i++)
+			if (n % i == 0)
+				System.out.print(i + " ");
+	}
   
 }
