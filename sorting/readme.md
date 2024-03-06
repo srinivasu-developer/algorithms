@@ -62,23 +62,23 @@ Although the worst case time complexity of QuickSort is O(n2) which is more than
 
 
 ### Why Quick Sort is preferred over MergeSort for sorting Arrays ?
-Quick Sort in its general form is an in-place sort (i.e. it doesn’t require any extra storage) whereas merge sort requires O(n) extra storage, n denoting the array size which may be quite expensive. Allocating and de-allocating the extra space used for merge sort increases the running time of the algorithm. Comparing average complexity we find that both type of sorts have O(n log n) average complexity but the constants differ. For arrays, merge sort loses due to the use of extra O(n) storage space.
-Most practical implementations of Quick Sort use randomized version. The randomized version has expected time complexity of O(n log n). The worst case is possible in randomized version also, but worst case doesn’t occur for a particular pattern (like sorted array) and randomized Quick Sort works well in practice.
-Quick Sort is also a cache friendly sorting algorithm as it has good locality of reference when used for arrays.
-Quick Sort is also tail recursive, therefore tail call optimizations is done.
+* Quick Sort in its general form is an in-place sort (i.e. it doesn’t require any extra storage) whereas merge sort requires O(n) extra storage, n denoting the array size which may be quite expensive. Allocating and de-allocating the extra space used for merge sort increases the running time of the algorithm. Comparing average complexity we find that both type of sorts have O(n log n) average complexity but the constants differ. For arrays, merge sort loses due to the use of extra O(n) storage space.
+* Most practical implementations of Quick Sort use randomized version. The randomized version has expected time complexity of O(n log n). The worst case is possible in randomized version also, but worst case doesn’t occur for a particular pattern (like sorted array) and randomized Quick Sort works well in practice.
+* Quick Sort is also a cache friendly sorting algorithm as it has good locality of reference when used for arrays.
+* Quick Sort is also tail recursive, therefore tail call optimizations is done.
 
 ### Why MergeSort is preferred over QuickSort for Linked Lists ? 
-In case of linked lists the case is different mainly due to difference in memory allocation of arrays and linked lists. Unlike arrays, linked list nodes may not be adjacent in memory. Unlike array, in linked list, we can insert items in the middle in O(1) extra space and O(1) time. Therefore merge operation of merge sort can be implemented without extra space for linked lists.
-In arrays, we can do random access as elements are continuous in memory. Let us say we have an integer (4-byte) array A and let the address of A[0] be x then to access A[i], we can directly access the memory at (x + i*4). Unlike arrays, we can not do random access in linked list. Quick Sort requires a lot of this kind of access. In linked list to access i’th index, we have to travel each and every node from the head to i’th node as we don’t have continuous block of memory. Therefore, the overhead increases for quick sort. Merge sort accesses data sequentially and the need of random access is low. 
+* In case of linked lists the case is different mainly due to difference in memory allocation of arrays and linked lists. Unlike arrays, linked list nodes may not be adjacent in memory. Unlike array, in linked list, we can insert items in the middle in O(1) extra space and O(1) time. Therefore merge operation of merge sort can be implemented without extra space for linked lists.
+* In arrays, we can do random access as elements are continuous in memory. Let us say we have an integer (4-byte) array A and let the address of A[0] be x then to access A[i], we can directly access the memory at (x + i*4). Unlike arrays, we can not do random access in linked list. Quick Sort requires a lot of this kind of access. In linked list to access i’th index, we have to travel each and every node from the head to i’th node as we don’t have continuous block of memory. Therefore, the overhead increases for quick sort. Merge sort accesses data sequentially and the need of random access is low. 
 
 ## Cycle Sort
 Cycle sort is an in-place sorting Algorithm, unstable sorting algorithm, and a comparison sort that is theoretically optimal in terms of the total number of writes to the original array. 
 * It is optimal in terms of the number of memory writes. It minimizes the number of memory writes to sort (Each value is either written zero times if it’s already in its correct position or written one time to its correct position.)
 * It is based on the idea that the array to be sorted can be divided into cycles. Cycles can be visualized as a graph. We have n nodes and an edge directed from node i to node j if the element at i-th index must be present at j-th index in the sorted array.
 ##### Time Complexity Analysis: 
-Worst Case: O(n^2)
-Average Case: O(n^2)
-Best Case: O(n^2)
+Worst Case: O(n<sup>2</sup>) <br>
+Average Case: O(n<sup>2</sup>) <br>
+Best Case: O(n<sup>2</sup>) <br>
 Auxiliary Space: O(1)
 
 ## Counting Sort
@@ -92,7 +92,7 @@ Counting sort is a sorting technique based on keys between a specific range. It 
 5. Counting sort can be extended to work for negative inputs also.
 
 ##### Time Complexity:
-Time Complexity: O(N + K) where N is the number of elements in input array and K is the range of input
+Time Complexity: O(N + K) where N is the number of elements in input array and K is the range of input <br>
 Auxiliary Space: O(N + K)
 
 ## What is a stable sorting algorithm? 
