@@ -92,8 +92,8 @@ Counting sort is a sorting technique based on keys between a specific range. It 
 5. Counting sort can be extended to work for negative inputs also.
 
 ##### Time Complexity:
-**Time Complexity**: O(N + K) where N is the number of elements in input array and K is the range of input.
-**Auxiliary Space**: O(N + K)
+Time Complexity: O(N + K) where N is the number of elements in input array and K is the range of input
+Auxiliary Space: O(N + K)
 
 ## What is a stable sorting algorithm? 
 A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input data set
