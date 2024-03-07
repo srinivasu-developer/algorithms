@@ -1,3 +1,7 @@
+/**
+* Counting sort implementation 
+* @author Srinivasu Nakka
+*/
 public class CountingSort {
 
     /* Given the string, arrange it lexographically sorted with counting sort */
