@@ -1,6 +1,7 @@
 /**
 * Counting sort implementation 
 * @author Srinivasu Nakka
+* @see https://github.com/srinivasu-developer/algorithms/blob/master/sorting/readme.md#counting-sort
 */
 public class CountingSort {
 
