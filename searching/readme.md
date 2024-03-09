@@ -9,5 +9,5 @@ Binary Search is a searching algorithm used in a sorted array by repeatedly divi
 * Repeatedly check from the second point until the value is found or the interval is empty.
 
 ##### Performance Analysis:
-**Time Complexity**: O(log n) <br>
-**Auxiliary Space**: O(log n)
+Time Complexity: O(log n) <br>
+Auxiliary Space: O(log n)
