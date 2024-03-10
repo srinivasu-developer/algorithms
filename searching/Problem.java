@@ -1,6 +1,7 @@
 public class Problem {
 
-    public int countOccurence(int[] arr, int n, int k) {
+    public int countOccurence(int[] arr, int k) {
+        int n = arr.length;
         int desired = n / k;
         Map<Integer, Integer> countMap = new HashMap<>();
         int currentElement;
