@@ -1,5 +1,8 @@
 public class Problem {
 
+    /** Given an array arr of size N and an element k. The task is to find the count of elements in the array that
+    * appear more than n/k times.
+    */
     public int countOccurence(int[] arr, int k) {
         int n = arr.length;
         int desired = n / k;
