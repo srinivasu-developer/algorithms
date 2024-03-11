@@ -22,8 +22,8 @@ public class Problem {
         return count;
     }
 
-    public static int findFloor(long arr[], int n, long x)
-    {
+    public static int findFloor(long arr[], long x) {
+        int n = arr.length;
         int lower = 0;
         int end = n - 1;
         int middle;
