@@ -22,7 +22,8 @@ public class Problem {
         return count;
     }
 
-    /** Given a sorted array arr[] of size n without duplicates, and given a value x. Floor of x is defined as the largest element 
+    /** 
+    * Given a sorted array arr[] of size n without duplicates, and given a value x. Floor of x is defined as the largest element 
     * K in arr[] such that K is smaller than or equal to x. Find the index of K(0-based indexing). 
     */
     public static int findFloor(long arr[], long x) {
@@ -63,6 +64,23 @@ public class Problem {
 			}
 		}
 		return res;
+    }
+
+	
+	public static int lastIndexOfOne(int arr[]) {
+        int low = 0, high = arr.length - 1;
+        int mid;
+        int result = -1;
+        while(low <= high) {
+            mid = (low + high) / 2;
+            if(arr[mid] == 0) {
+                high = mid - 1;
+            } else {
+                result = mid;
+                low = mid + 1;
+            }
+        }
+        return result;
     }
     
 }
