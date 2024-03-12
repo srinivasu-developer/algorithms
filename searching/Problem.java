@@ -1,6 +1,6 @@
 public class Problem {
 
-    /** Given an array arr of size N and an element k. The task is to find the count of elements in the array that
+    /** Given an array arr of size N and an element k. It finds the count of elements in the array that
     * appear more than n/k times.
     */
     public int countOccurence(int[] arr, int k) {
@@ -24,7 +24,7 @@ public class Problem {
 
     /** 
     * Given a sorted array arr[] of size n without duplicates, and given a value x. Floor of x is defined as the largest element 
-    * K in arr[] such that K is smaller than or equal to x. Find the index of K(0-based indexing). 
+    * K in arr[] such that K is smaller than or equal to x. It finds the index of K(0-based indexing). 
     */
     public static int findFloor(long arr[], long x) {
         int n = arr.length;
@@ -66,7 +66,10 @@ public class Problem {
 		return res;
     }
 
-	public static int countOnes(int arr[], int N){
+	/**
+ 	* Given a binary sorted non-increasing array of 1s and 0s. If finds the count of 1s in the binary array
+	*/
+	public static int countOnes(int arr[]){
         int lastIndex = lastIndexOf(arr);
         if(lastIndex < 0) {
             return 0;
