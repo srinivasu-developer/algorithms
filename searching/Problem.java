@@ -66,6 +66,13 @@ public class Problem {
 		return res;
     }
 
+	public static int countOnes(int arr[], int N){
+        int lastIndex = lastIndexOf(arr);
+        if(lastIndex < 0) {
+            return 0;
+        }
+        return ++lastIndex;
+    }
 	
 	public static int lastIndexOfOne(int arr[]) {
         int low = 0, high = arr.length - 1;
