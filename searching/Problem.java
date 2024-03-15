@@ -132,5 +132,14 @@ public class Problem {
 		}
 		return -1;
 	}
+
+	/* Count the number of occurances of given number x in the array */
+	public static int countOcc(int arr[], int x) {
+		int first = firstOcc(arr, x);
+		if(first == -1)
+			return 0;
+		else 
+			return lastOcc(arr, x) - first + 1;
+	}
     
 }
