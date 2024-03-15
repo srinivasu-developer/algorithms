@@ -93,6 +93,7 @@ public class Problem {
         return result;
     }
 
+	/* Finds the first occurance of the given number x */
 	public static int firstOcc(int arr[], int x) {
 		int n = arr.length;
 		int low = 0, high = n - 1;
@@ -112,6 +113,7 @@ public class Problem {
 		return -1;
 	}
 
+	/* Finds the last occurance of the given number x */
 	public static int lastOcc(int arr[], int x) {
 		int n = arr.length;
 		int low = 0, high = n - 1;
