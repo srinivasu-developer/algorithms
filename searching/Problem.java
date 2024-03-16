@@ -187,6 +187,24 @@ public class Problem {
 		return -1;
 	}
 
-	
+	/**
+ 	* Method takes an infinite size array and a key to be searched and returns its position if found else -1.
+	* We don't know size of arr[] and we can assume size to be infinite in this function.
+	* NOTE THAT THIS FUNCTION ASSUMES arr[] TO BE OF INFINITE SIZE THEREFORE, THERE IS NO INDEX OUT OF BOUND CHECKING 
+ 	*/
+	public static int findPos(int arr[], int key) {
+		int l = 0, h = 1;
+		int val = arr[0];
+		// Find h to do binary search
+		while (val < key) {
+			l = h;
+			if(2 * h < arr.length-1)
+				h = 2*h;			
+			else
+				h = arr.length-1;
+			val = arr[h];
+		}
+		return binarySearch(arr, l, h, key);
+	}
     
 }
