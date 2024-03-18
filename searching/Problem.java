@@ -207,7 +207,10 @@ public class Problem {
 		return binarySearch(arr, l, h, key);
 	}
 
-	public static int getPeak(int arr[]) {
+	/** Finds the peak element of the given unsorted array 
+ 	* A peak element is an element whose neighbors have value smaller than that of the element. 
+  	*/
+	public static int findPeak(int arr[]) {
 		int n = arr.length;
 		if(n == 1)
 			return arr[0];
@@ -223,7 +226,8 @@ public class Problem {
 		return -1;
 	}
 
-	public static double Median(int[] A, int[] B) {
+	/* Finds the median of the 2 given arrays */
+	public static double median(int[] A, int[] B) {
 		int n = A.length;
 		int m = B.length;
 		if (n > m)
