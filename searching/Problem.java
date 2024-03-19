@@ -289,5 +289,12 @@ public class Problem {
         }
         return res;
     } 
+
+	public static int sum(int arr[], int b, int e) {
+        int s = 0;
+        for(int i = b; i <= e; i++)
+            s += arr[i];
+        return s;
+    }
     
 }
