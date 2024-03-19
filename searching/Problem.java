@@ -296,5 +296,19 @@ public class Problem {
             s += arr[i];
         return s;
     }
+
+	public static boolean isPossible(int arr[], int m, int currMin) {
+		int studentsRequired = 1;
+		int currSum = 0;
+		int n = arr.length;
+		for (int i = 0; i < n; i++) {
+			currSum += arr[i];
+			if (currSum > currMin) {
+				studentsRequired++; 
+				currSum = arr[i];
+			}
+		}
+		return studentsRequired <= m;
+	}
     
 }
