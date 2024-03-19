@@ -272,5 +272,22 @@ public class Problem {
 		}
 		return 0.0;
 	}
+	
+    /** 
+ 	* Given a number of pages in N different books and M students. The books are arranged in ascending order of the number of pages. 
+ 	* Every student is assigned to read some consecutive books. Assigns books in such a way that the maximum number of pages assigned to a student is minimum. 
+  	*/
+    public static int minPages(int arr[], int k) {
+		int n = arr.length;
+        if(k == 1)
+            return sum(arr, 0, n-1);
+        if(n == 1)
+            return arr[0];
+        int res = Integer.MAX_VALUE;
+        for(int i = 1; i < n; i++) {
+            res = Math.min(res, Math.max(minPages(arr, i, k-1), sum(arr, i, n-1)));
+        }
+        return res;
+    } 
     
 }
