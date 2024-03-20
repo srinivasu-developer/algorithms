@@ -14,7 +14,7 @@ AB ≠ BA (Not Commutative)
 (AB) C = A (BC) (Associative)
 A (B+C) = AB+AC (Distributive)
 
-# Terminologies
+### Terminologies
 * Square Matrix: A square Matrix has as many rows as it has columns. i.e. no of rows = no of columns.
 * Symmetric matrix: A square matrix is said to be symmetric if the transpose of original matrix is equal to its original matrix. i.e. (AT) = A.
 * Skew-symmetric: A skew-symmetric (or antisymmetric or antimetric[1]) matrix is a square matrix whose transpose equals its negative.i.e. (AT) = -A.
@@ -25,3 +25,7 @@ A (B+C) = AB+AC (Distributive)
 * Involutary Matrix: A matrix is said to be Involutary if A2 = I.
 * Singular Matrix: A square matrix is said to be singular matrix if its determinant is zero i.e. |A|=0
 * Nonsingular Matrix: A square matrix is said to be non-singular matrix if its determinant is non-zero.
+
+
+#### Matrices Addition
+The addition of two matrices A m*n and Bm*n gives a matrix Cm*n. Here, m and n represents the number of rows and columns in the matrix respectively
