@@ -1,6 +1,6 @@
 public class Problems {
 
-    static int[][] sumMatrix(int a[][], int b[][]) {
+    public static int[][] sumMatrix(int a[][], int b[][]) {
         if(a.length != b.length || a[0].length != b[0].length) {
             return new int[0][0];
         }
@@ -12,8 +12,7 @@ public class Problems {
         return a;
     }
 
-    static int[][] multiplyMatrix(int a[][], int b[][])
-    {
+    public static int[][] multiplyMatrix(int a[][], int b[][]) {
         if(a[0].length != b.length) {
             return new int[0][0];
         }
