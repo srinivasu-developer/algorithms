@@ -11,4 +11,28 @@ public class Problems {
         }
         return a;
     }
+
+    static int[][] multiplyMatrix(int a[][], int b[][])
+    {
+        if(a[0].length != b.length) {
+            return new int[0][0];
+        }
+        int aRows = a.length;
+        int bRows = b.length;
+        int bCols = b[0].length;
+        int[][] results = new int[aRows][bCols];
+        int currentRow = 0;
+        while(currentRow < aRows) {
+            int currentColumn = 0;
+            while(currentColumn < bCols) {
+                int currentValue = 0;
+                for(int j = 0; j < bRows; j++) {
+                    currentValue += (a[currentRow][j] * b[j][currentColumn]);
+                }
+                results[currentRow][currentColumn++] = currentValue;
+            } 
+            currentRow++;
+        }
+        return results;
+    }
 }
