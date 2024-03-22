@@ -50,16 +50,17 @@ public class Problems {
     }
 
     /* Boundary traversal */
-    public static ArrayList<Integer> boundaryTraversal(int matrix[][], int n, int m) {
+    public static List<Integer> boundaryTraversal(int matrix[][]) {
+        int n = matrix.length;
+        int m = matrix[0].length;
         int max = Math.max(n, m);
         int min = Math.min(n, m);
         int resultsSize = (2 * min) + max;
-        ArrayList<Integer> results = new ArrayList<>(resultsSize);
+        List<Integer> results = new ArrayList<>(resultsSize);
         if(n == 1) {
             for(int i = 0; i < m; i++) {
                 results.add(matrix[0][i]);
             }
-            
         } else if(m == 1) {
             for(int i = 0; i < n; i++) {
                 results.add(matrix[i][0]);
