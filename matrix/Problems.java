@@ -47,4 +47,35 @@ public class Problems {
         }
         return results;
     }
+
+    public static ArrayList<Integer> boundaryTraversal(int matrix[][], int n, int m) {
+        int max = Math.max(n, m);
+        int min = Math.min(n, m);
+        int resultsSize = (2 * min) + max;
+        ArrayList<Integer> results = new ArrayList<>(resultsSize);
+        if(n == 1) {
+            for(int i = 0; i < m; i++) {
+                results.add(matrix[0][i]);
+            }
+            
+        } else if(m == 1) {
+            for(int i = 0; i < n; i++) {
+                results.add(matrix[i][0]);
+            }
+        } else {
+            for(int j = 0; j < m; j++) {
+                results.add(matrix[0][j]);
+            }
+            for(int j = 1; j < n; j++) {
+                results.add(matrix[j][m - 1]);
+            }
+            for(int j = m - 2; j >= 0; j--) {
+                results.add(matrix[n - 1][j]);
+            }
+            for(int j = n - 2; j > 0; j--) {
+                results.add(matrix[j][0]);
+            }
+        }
+        return results;
+    }
 }
