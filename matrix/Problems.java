@@ -34,4 +34,17 @@ public class Problems {
         }
         return results;
     }
+
+    public static List<Integer> snakePattern(int matrix[][]) {
+        List<Integer> results = new ArrayList<>();
+        boolean forwardMove = true;
+        int rows = matrix.length;
+        for(int i = 0; i < rows; i++) {
+           for(int j = 0, k = rows - 1; j < rows; j++, k--) {
+               results.add(matrix[i][forwardMove ? j : k]);
+           }
+           forwardMove = !forwardMove;
+        }
+        return results;
+    }
 }
