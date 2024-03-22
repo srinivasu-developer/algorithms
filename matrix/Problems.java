@@ -35,6 +35,7 @@ public class Problems {
         return results;
     }
 
+    /* Snake pattern of the mattrix will be returned as a list */
     public static List<Integer> snakePattern(int matrix[][]) {
         List<Integer> results = new ArrayList<>();
         boolean forwardMove = true;
@@ -48,6 +49,7 @@ public class Problems {
         return results;
     }
 
+    /* Boundary traversal */
     public static ArrayList<Integer> boundaryTraversal(int matrix[][], int n, int m) {
         int max = Math.max(n, m);
         int min = Math.min(n, m);
