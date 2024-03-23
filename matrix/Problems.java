@@ -89,6 +89,11 @@ public class Problems {
                 swap(a, i, j);
             }
         }
-        
+    }
+
+    private static void swap(int[][] arr, int first, int second) {
+        int temp = arr[first][second];
+        arr[first][second] = arr[second][first];
+        arr[second][first] = temp;
     }
 }
