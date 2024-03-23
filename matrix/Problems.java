@@ -96,4 +96,10 @@ public class Problems {
         arr[first][second] = arr[second][first];
         arr[second][first] = temp;
     }
+
+    private static void swap(int[][] arr, int row1, int col1, int row2) {
+        int temp = arr[row1][col1];
+        arr[row1][col1] = arr[row2][col1];
+        arr[row2][col1] = temp;
+    }
 }
