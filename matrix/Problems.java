@@ -81,4 +81,14 @@ public class Problems {
         }
         return results;
     }
+
+    public void transpose(int a[][]) {
+        int n = a.length;
+        for(int i = 0; i < n; i++) {
+            for(int j = i + 1; j < n; j++) {
+                swap(a, i, j);
+            }
+        }
+        
+    }
 }
