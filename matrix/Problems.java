@@ -102,4 +102,13 @@ public class Problems {
         arr[row1][col1] = arr[row2][col1];
         arr[row2][col1] = temp;
     }
+
+     private static void swapRows(int[][] a) {
+        int n = a.length;
+        for(int i = 0; i < n / 2; i++) {
+            for(int j = 0; j < n; j++) {
+                swap(a, i, j, n - i - 1);
+            }
+        }
+    }
 }
