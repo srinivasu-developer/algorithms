@@ -94,6 +94,9 @@ public class Problems {
         }
     }
 
+	/**
+	* Given a square matrix of size N x N. Rotates it by 90 degrees in anti-clockwise direction without using any extra space. 
+	*/
     public static void rotateby90(int matrix[][]) { 
         transpose(matrix);
         swapRows(matrix);
