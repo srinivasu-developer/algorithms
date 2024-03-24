@@ -96,6 +96,24 @@ public class Problems {
         swapRows(matrix);
     }
 
+    public static boolean search(int matrix[][], int x) {  
+        int n = matrix.length;
+        int m = matrix[0].length;
+	    boolean found = false;
+	    int i = 0, j = m - 1;
+	    while(i <= n - 1 && j >= 0) {
+	        if(matrix[i][j] < x) {
+	            i++;
+	        } else if(matrix[i][j] > x) {
+	            j--;
+	        } else {
+	            found = true;
+	            break;
+	        }
+	    }
+	    return found;
+	} 
+
     private static void swap(int[][] arr, int first, int second) {
         int temp = arr[first][second];
         arr[first][second] = arr[second][first];
