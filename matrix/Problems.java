@@ -82,6 +82,9 @@ public class Problems {
         return results;
     }
 
+	/**
+	* Finds the transpose of a square matrix of size N*N. Transpose of a matrix is obtained by changing rows to columns and columns to rows.
+	*/
     public void transpose(int a[][]) {
         int n = a.length;
         for(int i = 0; i < n; i++) {
