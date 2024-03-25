@@ -102,6 +102,10 @@ public class Problems {
         swapRows(matrix);
     }
 
+	/**
+	* Given a matrix of size n x m, where every row and column is sorted in increasing order, and a number x.
+ 	* Searches whether element x is present in the matrix or not.
+	*/
     public static boolean search(int matrix[][], int x) {  
         int n = matrix.length;
         int m = matrix[0].length;
