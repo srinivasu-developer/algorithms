@@ -124,6 +124,9 @@ public class Problems {
 	    return found;
 	} 
 
+	/**
+	* Swaps the matrix i and j positions
+	*/
     private static void swap(int[][] arr, int first, int second) {
         int temp = arr[first][second];
         arr[first][second] = arr[second][first];
