@@ -133,6 +133,9 @@ public class Problems {
         arr[second][first] = temp;
     }
 
+	/**
+	* Swaps the matrix rows
+	*/
     private static void swap(int[][] arr, int row1, int col1, int row2) {
         int temp = arr[row1][col1];
         arr[row1][col1] = arr[row2][col1];
