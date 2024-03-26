@@ -8,6 +8,7 @@ public class Math {
 		return 1 + countDigit(n / 10);
 	}
 
+	/* Checks whether the given number is palindrome or not */
 	public static boolean checkPalindrome(int n) {
 		int reverse = 0;
 		int temp = n;
