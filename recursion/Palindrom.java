@@ -1,7 +1,7 @@
 public class Palindrom {
-    
-    public static boolean isPalRec(String str, int s, int e)
-    {
+
+    /* Palindrome check of the given string with recursion */
+    public static boolean isPalRec(String str, int s, int e) {
         // If there is only one character
         if (s == e)
             return true;
