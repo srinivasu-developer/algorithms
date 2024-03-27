@@ -14,8 +14,8 @@ public class Palindrom {
         return true;
     }
 
-    public static boolean isPalindrome(String str)
-    {
+    /* Checks whether the given string is palindrome or not */
+    public static boolean isPalindrome(String str) {
         int n = str.length();
         // An empty string is considered as palindrome
         if (n == 0)
