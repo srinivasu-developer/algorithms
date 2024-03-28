@@ -28,7 +28,7 @@ A (B+C) = AB+AC (Distributive)
 
 
 #### Matrices Addition
-The addition of two matrices A m*n and Bm*n gives a matrix Cm*n. Here, m and n represents the number of rows and columns in the matrix respectively
+The addition of two matrices A m*n and Bm*n gives a matrix Cm*n. Here, m and n represents the number of rows and columns in the matrix respectively.
 
 #### Matrices Subtraction
 The subtraction of two matrices Am*n and Bm*n gives a matrix Cm*n. Here, m and n represents the number of rows and columns in the matrix respectively.
