@@ -16,7 +16,7 @@ A (B+C) = AB+AC (Distributive)
 
 ### Terminologies
 * Square Matrix: A square Matrix has as many rows as it has columns. i.e. no of rows = no of columns.
-* Symmetric matrix: A square matrix is said to be symmetric if the transpose of original matrix is equal to its original matrix. i.e. (AT) = A.
+* Symmetric matrix: A square matrix is said to be symmetric if the transpose of original matrix is equal to its original matrix. i.e. (AT) = A
 * Skew-symmetric: A skew-symmetric (or antisymmetric or antimetric[1]) matrix is a square matrix whose transpose equals its negative.i.e. (AT) = -A.
 * Diagonal Matrix:A diagonal matrix is a matrix in which the entries outside the main diagonal are all zero. The term usually refers to square matrices.
 * Identity Matrix:A square matrix in which all the elements of the principal diagonal are ones and all other elements are zeros.Identity matrix is denoted as I.
