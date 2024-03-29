@@ -21,8 +21,8 @@ A (B+C) = AB+AC (Distributive)
 * Diagonal Matrix:A diagonal matrix is a matrix in which the entries outside the main diagonal are all zero. The term usually refers to square matrices.
 * Identity Matrix:A square matrix in which all the elements of the principal diagonal are ones and all other elements are zeros.Identity matrix is denoted as I.
 * Orthogonal Matrix: A matrix is said to be orthogonal if AAT = ATA = I.
-* Idemponent Matrix: A matrix is said to be idemponent if A2 = A.
-* Involutary Matrix: A matrix is said to be Involutary if A2 = I.
+* Idemponent Matrix: A matrix is said to be idemponent if A<sup>2</sup> = A.
+* Involutary Matrix: A matrix is said to be Involutary if A<sup>2</sup> = I.
 * Singular Matrix: A square matrix is said to be singular matrix if its determinant is zero i.e. |A|=0
 * Nonsingular Matrix: A square matrix is said to be non-singular matrix if its determinant is non-zero.
 
