@@ -151,6 +151,17 @@ public class Problems {
         return results;
     }
 
+	public static void exchangeColumns(int matrix[][]) {
+        int rows = matrix.length;
+        int columns = matrix[0].length;
+        int temp;
+        for(int i = 0; i < rows; i++) {
+            temp = matrix[i][0];
+            matrix[i][0] = matrix[i][columns - 1];
+            matrix[i][columns - 1] = temp;
+        }
+    }
+
 	/**
 	* Swaps the matrix i and j positions
 	*/
