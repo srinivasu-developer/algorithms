@@ -124,6 +124,28 @@ public class Problems {
 	    return found;
 	} 
 
+	public static List<Integer> sumTriangles(int matrix[][]) {
+		int n = matrix.length;
+        List<Integer> results = new ArrayList<>();
+        int up = 0;
+        int down = 0;
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                if(i < j) {
+                    up += matrix[i][j];
+                } else if (i > j) {
+                    down += matrix[i][j];
+                } else {
+                    up += matrix[i][j];
+                    down += matrix[i][j];
+                }
+            }
+        }
+        results.add(up);
+        results.add(down);
+        return results;
+    }
+
 	/**
 	* Swaps the matrix i and j positions
 	*/
