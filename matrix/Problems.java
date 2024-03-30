@@ -124,6 +124,11 @@ public class Problems {
 	    return found;
 	} 
 
+	/**
+ 	* Given a square matrix of size N*N, prints the sum of upper and lower triangular elements. 
+  	* Upper Triangle consists of elements on the diagonal and above it. 
+  	* The lower triangle consists of elements on the diagonal and below it. 
+  	*/
 	public static List<Integer> sumTriangles(int matrix[][]) {
 		int n = matrix.length;
         List<Integer> results = new ArrayList<>();
