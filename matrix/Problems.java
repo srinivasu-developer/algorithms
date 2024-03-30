@@ -151,6 +151,9 @@ public class Problems {
         return results;
     }
 
+	/**
+ 	* Given a matrix of dimensions (n1 x m1). Exchanges its first column with the last column.
+  	*/
 	public static void exchangeColumns(int matrix[][]) {
         int rows = matrix.length;
         int columns = matrix[0].length;
