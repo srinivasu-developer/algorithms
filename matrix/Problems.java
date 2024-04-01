@@ -175,6 +175,16 @@ public class Problems {
         }
     }
 
+	public static void interchangeRows(int matrix[][]) {
+        int rows = matrix.length;
+        int columns = matrix[0].length;
+        for(int i = 0; i < rows / 2; i++) {
+            for(int j = 0; j < columns; j++) {
+                swap(matrix, i, j, rows - i - 1);
+            }
+        }
+    }
+
 	/* Swaps the row and column */
 	private static void swap(int[][] arr, int row1, int col1, int col2) {
         int temp = arr[row1][col1];
