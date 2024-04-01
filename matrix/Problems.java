@@ -175,6 +175,10 @@ public class Problems {
         }
     }
 
+	/** 
+ 	* Given a matrix of dimensions n1 x m1. Interchange its rows in-place such that the first row will become 
+ 	* the last row and so on. 
+	*/
 	public static void interchangeRows(int matrix[][]) {
         int rows = matrix.length;
         int columns = matrix[0].length;
