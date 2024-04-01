@@ -165,6 +165,23 @@ public class Problems {
         }
     }
 
+	public static void reverseCol(int matrix[][]) {
+        int rows = matrix.length;
+        int columns = matrix[0].length;
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < columns / 2; j++) {
+                swap(matrix, i, j, columns - j - 1);
+            }
+        }
+    }
+
+	/* Swaps the row and column */
+	private static void swap(int[][] arr, int row1, int col1, int col2) {
+        int temp = arr[row1][col1];
+        arr[row1][col1] = arr[row1][col2];
+        arr[row1][col2] = temp;
+    }
+
 	/**
 	* Swaps the matrix i and j positions
 	*/
